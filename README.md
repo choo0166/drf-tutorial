@@ -32,6 +32,7 @@ Based on the official DRF [tutorial](https://www.django-rest-framework.org/tutor
   ```bash
   psql -U $USER -d postgres
   CREATE ROLE "<USER>" WITH PASSWORD '<PASSWORD>'; # replace <USER> and <PASSWORD>
+  ALTER ROLE "<USER>" WITH LOGIN; # allow login
   ```
 
   Create the project database and associate the owner to the user created above.
