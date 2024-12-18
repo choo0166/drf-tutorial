@@ -31,14 +31,14 @@ Based on the official DRF [tutorial](https://www.django-rest-framework.org/tutor
 
   ```bash
   psql -U $USER -d postgres
-  CREATE USER "<USER>" WITH PASSWORD '<PASSWORD>' # replace <USER> and <PASSWORD>
+  CREATE ROLE "<USER>" WITH PASSWORD '<PASSWORD>'; # replace <USER> and <PASSWORD>
   ```
 
   Create the project database and associate the owner to the user created above.
 
   ```bash
-  CREATE DATABASE <DB> OWNER "<USER>"
-  GRANT ALL PRIVILEGES ON DATABASE <DB> TO "<USER>"
+  CREATE DATABASE <DB> OWNER "<USER>";
+  GRANT ALL PRIVILEGES ON DATABASE <DB> TO "<USER>";
   \q
   ```
 
